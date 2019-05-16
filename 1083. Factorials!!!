@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    int a,b,i,ans=1;
+    char x[100];
+    scanf("%d %s",&a,x);
+    b=strlen(x);
+    for(i=a;a>=1;a=a-b)
+    {
+        ans=a*ans;
+    }
+    printf("%d\n",ans);
+    return 0;
+}
