@@ -1,0 +1,17 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    long long x,i=0,j;
+    double rt[165000];
+    while(cin>>x)
+    {
+        rt[i]=sqrt(x);
+        i++;
+    }
+    for(j=i-1;j>=0;j--){
+        printf("%.4lf\n",rt[j]);
+    }
+
+    return 0;
+}
