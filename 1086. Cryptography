@@ -1,0 +1,40 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+#define num 165000
+long prime[num];
+
+int main()
+{
+    long long count=0,i,j,k,x,y,S;
+    prime[1]=2;
+    prime[2]=3;
+    k=3;
+    for(i=5;i<=num;i=i+2)
+    {
+        S=sqrt(i);
+        count=0;
+        for(j=2;j<=S;j++)
+        {
+            if(i%j==0)
+            {
+                count++;
+                break;
+            }
+        }
+        if(count==0)
+                prime[k++]=i;
+    }
+    cin>>x;
+    while(x--)
+    {
+        cin>>y;
+        cout<<prime[y]<<endl;
+    }
+
+
+
+
+
+    return 0;
+}
